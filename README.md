@@ -104,12 +104,6 @@ Open the HTML file in your browser
 
 No installation required
 
-🌐 Live Demo (Optional)
-
-If deployed using GitHub Pages:
-
-https://AllaboyinaHariNagaMounica9.github.io/novaui-bootstrap5-ui/
-
 🎯 Purpose of the Project
 
 This project was built to:
