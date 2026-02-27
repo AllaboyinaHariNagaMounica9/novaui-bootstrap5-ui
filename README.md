@@ -118,6 +118,6 @@ Build a professional frontend portfolio project
 
 📌 Author
 
-Your Name
+Allaboyina Hari Naga Mounica
 B.Tech Computer Science Engineering
 Frontend Developer
