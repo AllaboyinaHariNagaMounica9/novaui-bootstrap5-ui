@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NovaUI - Next Gen Bootstrap UI</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+<style>
+html{scroll-behavior:smooth;}
+body{font-family:system-ui;overflow-x:hidden;}
+
+/* Scroll Progress */
+#progressBar{
+position:fixed;top:0;left:0;height:4px;
+background:linear-gradient(to right,#4f46e5,#06b6d4);
+width:0%;z-index:9999;
+}
+
+/* Navbar */
+.navbar{transition:all .4s ease;}
+.navbar.scrolled{
+background:rgba(255,255,255,0.95)!important;
+backdrop-filter:blur(10px);
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+padding:.6rem 1rem;
+}
+
+/* Hero */
+.hero{
+background:linear-gradient(-45deg,#4f46e5,#06b6d4,#6366f1,#0ea5e9);
+background-size:400% 400%;
+animation:gradientMove 12s ease infinite;
+color:white;
+padding:160px 0;
+position:relative;
+}
+@keyframes gradientMove{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+.floating-icon{
+position:absolute;
+font-size:2rem;
+opacity:.2;
+animation:float 6s ease-in-out infinite;
+}
+@keyframes float{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-25px)}
+}
+
+/* Reveal animation */
+.reveal{
+opacity:0;
+transform:translateY(60px);
+transition:all .9s ease;
+}
+.reveal.active{
+opacity:1;
+transform:translateY(0);
+}
+
+/* Cards */
+.feature-card{
+border-radius:20px;
+transition:all .4s ease;
+}
+.feature-card:hover{
+transform:translateY(-15px) scale(1.03);
+box-shadow:0 25px 50px rgba(0,0,0,.2);
+}
+
+/* CTA */
+.cta{
+background:linear-gradient(135deg,#4f46e5,#0ea5e9);
+color:white;
+border-radius:30px;
+}
+
+/* Scroll Top Button */
+#scrollTop{
+position:fixed;
+bottom:30px;
+right:30px;
+display:none;
+z-index:999;
+}
+
+/* Footer */
+.footer-dark{background:#0f172a;}
+
+</style>
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+<div class="container">
+<a class="navbar-brand fw-bold" href="#">NovaUI</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+</ul>
+<button class="btn btn-primary ms-lg-3" data-bs-toggle="tooltip" title="Download UI Kit">
+<i class="bi bi-cloud-arrow-down"></i>
+</button>
+</div>
+</div>
+</nav>
+
+<!-- HERO -->
+<section class="hero text-center">
+<i class="bi bi-code-slash floating-icon" style="top:20%;left:10%;"></i>
+<i class="bi bi-lightning-charge floating-icon" style="top:30%;right:15%;animation-delay:2s;"></i>
+
+<div class="container">
+<h1 class="display-3 fw-bold reveal">Build Fast. Design Better.</h1>
+<p class="lead mt-3 reveal">An interactive Bootstrap 5 remix with animations and modern UI design.</p>
+
+<div class="mt-4 reveal">
+<a href="about.html" class="btn btn-light btn-lg me-3">
+<i class="bi bi-rocket-takeoff"></i> Explore
+</a>
+<a href="contact.html" class="btn btn-outline-light btn-lg">
+<i class="bi bi-chat-dots"></i> Contact
+</a>
+</div>
+</div>
+</section>
+
+<!-- FEATURES -->
+<section class="py-5 bg-light">
+<div class="container text-center">
+<h2 class="fw-bold mb-5 reveal">Core Features</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4 reveal">
+<div class="card p-4 border-0 feature-card h-100 shadow-sm">
+<i class="bi bi-grid-3x3-gap-fill fs-1 text-primary"></i>
+<h5 class="mt-3">Responsive Grid</h5>
+<p>Mobile-first powerful layout system built with Bootstrap utilities.</p>
+</div>
+</div>
+
+<div class="col-md-4 reveal">
+<div class="card p-4 border-0 feature-card h-100 shadow-sm">
+<i class="bi bi-brush-fill fs-1 text-success"></i>
+<h5 class="mt-3">Design Utilities</h5>
+<p>Spacing, typography and color utilities remixed creatively.</p>
+</div>
+</div>
+
+<div class="col-md-4 reveal">
+<div class="card p-4 border-0 feature-card h-100 shadow-sm">
+<i class="bi bi-cpu-fill fs-1 text-danger"></i>
+<h5 class="mt-3">Component System</h5>
+<p>Reusable modals, navbars, cards and interactive elements.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- CTA -->
+<section class="py-5">
+<div class="container">
+<div class="cta text-center p-5 shadow-lg reveal">
+<h2 class="fw-bold">Start Building Today</h2>
+<p class="mb-4">Create responsive, animated, modern UI with Bootstrap 5.</p>
+<a href="contact.html" class="btn btn-light btn-lg">
+<i class="bi bi-send-fill"></i> Get Started
+</a>
+</div>
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer-dark text-white text-center py-4">
+<p class="mb-0">© 2026 NovaUI | Built with Bootstrap 5</p>
+</footer>
+
+<button id="scrollTop" class="btn btn-primary rounded-circle">
+<i class="bi bi-arrow-up"></i>
+</button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+/* Navbar shrink */
+window.addEventListener("scroll",function(){
+document.querySelector(".navbar").classList.toggle("scrolled",window.scrollY>50);
+});
+
+/* Scroll reveal */
+function reveal(){
+document.querySelectorAll(".reveal").forEach(el=>{
+if(el.getBoundingClientRect().top < window.innerHeight-100){
+el.classList.add("active");
+}
+});
+}
+window.addEventListener("scroll",reveal);
+reveal();
+
+/* Scroll progress */
+window.addEventListener("scroll",()=>{
+let scrollTop=document.documentElement.scrollTop;
+let scrollHeight=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+let progress=(scrollTop/scrollHeight)*100;
+document.getElementById("progressBar").style.width=progress+"%";
+});
+
+/* Scroll Top */
+let scrollBtn=document.getElementById("scrollTop");
+window.addEventListener("scroll",()=>{
+scrollBtn.style.display=window.scrollY>300?"block":"none";
+});
+scrollBtn.onclick=()=>window.scrollTo({top:0,behavior:"smooth"});
+
+/* Enable tooltips */
+var tooltipTriggerList=[].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+tooltipTriggerList.map(function (tooltipTriggerEl) {
+return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+
+</script>
+
+</body>
+</html>
