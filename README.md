@@ -108,7 +108,7 @@ No installation required
 
 If deployed using GitHub Pages:
 
-https://yourusername.github.io/novaui-bootstrap5-ui/
+https://AllaboyinaHariNagaMounica9.github.io/novaui-bootstrap5-ui/
 
 🎯 Purpose of the Project
 
